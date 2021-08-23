@@ -3,7 +3,7 @@
     public class UniversalTable
     {
         private Roller rand = new Roller();
-        private int RollResult = new int();
+        public int RollResult = 0;
         public int CostToGreen = -1;
         public int CostToYellow = -1;
         public int CostToRed = -1;
