@@ -51,6 +51,12 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.cboRollType = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblGreen = new System.Windows.Forms.Label();
+            this.lblYellow = new System.Windows.Forms.Label();
+            this.lvlRed = new System.Windows.Forms.Label();
+            this.lblGreenCost = new System.Windows.Forms.Label();
+            this.lblYellowCost = new System.Windows.Forms.Label();
+            this.lblRedCost = new System.Windows.Forms.Label();
             this.pnlResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -292,6 +298,12 @@
             // pnlResult
             // 
             this.pnlResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlResult.Controls.Add(this.lblRedCost);
+            this.pnlResult.Controls.Add(this.lblYellowCost);
+            this.pnlResult.Controls.Add(this.lblGreenCost);
+            this.pnlResult.Controls.Add(this.lvlRed);
+            this.pnlResult.Controls.Add(this.lblYellow);
+            this.pnlResult.Controls.Add(this.lblGreen);
             this.pnlResult.Controls.Add(this.lblResult);
             this.pnlResult.Location = new System.Drawing.Point(157, 99);
             this.pnlResult.Name = "pnlResult";
@@ -301,10 +313,10 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.Location = new System.Drawing.Point(3, 232);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(101, 25);
+            this.lblResult.Size = new System.Drawing.Size(89, 24);
             this.lblResult.TabIndex = 0;
             this.lblResult.Text = "RESULT";
             // 
@@ -349,6 +361,66 @@
             this.pictureBox1.Size = new System.Drawing.Size(276, 71);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblGreen
+            // 
+            this.lblGreen.AutoSize = true;
+            this.lblGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreen.Location = new System.Drawing.Point(3, 394);
+            this.lblGreen.Name = "lblGreen";
+            this.lblGreen.Size = new System.Drawing.Size(132, 20);
+            this.lblGreen.TabIndex = 1;
+            this.lblGreen.Text = "Cost to Green: ";
+            // 
+            // lblYellow
+            // 
+            this.lblYellow.AutoSize = true;
+            this.lblYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYellow.Location = new System.Drawing.Point(3, 426);
+            this.lblYellow.Name = "lblYellow";
+            this.lblYellow.Size = new System.Drawing.Size(134, 20);
+            this.lblYellow.TabIndex = 2;
+            this.lblYellow.Text = "Cost to Yellow: ";
+            // 
+            // lvlRed
+            // 
+            this.lvlRed.AutoSize = true;
+            this.lvlRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlRed.Location = new System.Drawing.Point(3, 458);
+            this.lvlRed.Name = "lvlRed";
+            this.lvlRed.Size = new System.Drawing.Size(115, 20);
+            this.lvlRed.TabIndex = 3;
+            this.lvlRed.Text = "Cost to Red: ";
+            // 
+            // lblGreenCost
+            // 
+            this.lblGreenCost.AutoSize = true;
+            this.lblGreenCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreenCost.Location = new System.Drawing.Point(141, 394);
+            this.lblGreenCost.Name = "lblGreenCost";
+            this.lblGreenCost.Size = new System.Drawing.Size(38, 20);
+            this.lblGreenCost.TabIndex = 4;
+            this.lblGreenCost.Text = "N/A";
+            // 
+            // lblYellowCost
+            // 
+            this.lblYellowCost.AutoSize = true;
+            this.lblYellowCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYellowCost.Location = new System.Drawing.Point(141, 426);
+            this.lblYellowCost.Name = "lblYellowCost";
+            this.lblYellowCost.Size = new System.Drawing.Size(38, 20);
+            this.lblYellowCost.TabIndex = 5;
+            this.lblYellowCost.Text = "N/A";
+            // 
+            // lblRedCost
+            // 
+            this.lblRedCost.AutoSize = true;
+            this.lblRedCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRedCost.Location = new System.Drawing.Point(141, 458);
+            this.lblRedCost.Name = "lblRedCost";
+            this.lblRedCost.Size = new System.Drawing.Size(38, 20);
+            this.lblRedCost.TabIndex = 6;
+            this.lblRedCost.Text = "N/A";
             // 
             // Form1
             // 
@@ -409,6 +481,12 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.ComboBox cboRollType;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblRedCost;
+        private System.Windows.Forms.Label lblYellowCost;
+        private System.Windows.Forms.Label lblGreenCost;
+        private System.Windows.Forms.Label lvlRed;
+        private System.Windows.Forms.Label lblYellow;
+        private System.Windows.Forms.Label lblGreen;
     }
 }
 

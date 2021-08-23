@@ -14,6 +14,7 @@ namespace JudgeRoller_App
 
         private UniversalTable UT = new UniversalTable();
         private string ROLLING = "ROLLING";
+        private int RollResult = new int();
 
         private void RollingAlert(int time)
         {
@@ -22,36 +23,51 @@ namespace JudgeRoller_App
             System.Threading.Thread.Sleep(time);
         }
 
+        private void UpdateKarmaCosts()
+        {
+            if (UT.CostToGreen < 0) lblGreenCost.Text = "NA";
+            else lblGreenCost.Text = UT.CostToGreen.ToString();
+            if (UT.CostToYellow < 0) lblYellowCost.Text = "NA";
+            else lblYellowCost.Text = UT.CostToYellow.ToString();
+            if (UT.CostToRed < 0) lblRedCost.Text = "NA";
+            else lblRedCost.Text = UT.CostToRed.ToString();
+        }
+
         private void UpdateResult(string color)
         {
             pnlResult.BackColor = Color.Blue;
             lblResult.Text = "";
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(250);
             switch (color)
             {
                 case "WHITE":
                     {
                         pnlResult.BackColor = Color.White;
+                        UpdateKarmaCosts();
                         break;
                     }
                 case "GREEN":
                     {
                         pnlResult.BackColor = Color.Green;
+                        UpdateKarmaCosts();
                         break;
                     }
                 case "YELLOW":
                     {
                         pnlResult.BackColor = Color.Yellow;
+                        UpdateKarmaCosts();
                         break;
                     }
                 case "RED":
                     {
                         pnlResult.BackColor = Color.Red;
+                        UpdateKarmaCosts();
                         break;
                     }
                 default:
                     {
                         pnlResult.BackColor = Color.Gray;
+                        UpdateKarmaCosts();
                         break;
                     }
             }
@@ -211,94 +227,99 @@ namespace JudgeRoller_App
             }
         }
 
+        private void UpdateKarmaCosts(string color)
+        {
+            
+        }
+
         private void btnShift0_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Shift-0"));
+            UpdateResult(UT.RollFEAT("Shift-0", out RollResult));
         }
 
         private void btnFeeble_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Feeble"));
+            UpdateResult(UT.RollFEAT("Feeble", out RollResult));
         }
 
         private void btnPoor_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Poor"));
+            UpdateResult(UT.RollFEAT("Poor", out RollResult));
         }
 
         private void btnTypical_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Typical"));
+            UpdateResult(UT.RollFEAT("Typical", out RollResult));
         }
 
         private void btnGood_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Good"));
+            UpdateResult(UT.RollFEAT("Good", out RollResult));
         }
 
         private void btnExcellent_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Excellent"));
+            UpdateResult(UT.RollFEAT("Excellent", out RollResult));
         }
 
         private void btnRemarkable_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Remarkable"));
+            UpdateResult(UT.RollFEAT("Remarkable", out RollResult));
         }
 
         private void btnIncredible_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Incredible"));
+            UpdateResult(UT.RollFEAT("Incredible", out RollResult));
         }
 
         private void btnAmazing_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Amazing"));
+            UpdateResult(UT.RollFEAT("Amazing", out RollResult));
         }
 
         private void btnMonstrous_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Monstrous"));
+            UpdateResult(UT.RollFEAT("Monstrous", out RollResult));
         }
 
         private void btnUnearthly_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Unearthly"));
+            UpdateResult(UT.RollFEAT("Unearthly", out RollResult));
         }
 
         private void btnShiftX_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Shift-X"));
+            UpdateResult(UT.RollFEAT("Shift-X", out RollResult));
         }
 
         private void btnShiftY_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Shift-Y"));
+            UpdateResult(UT.RollFEAT("Shift-Y", out RollResult));
         }
 
         private void btnShiftZ_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Shift-Z"));
+            UpdateResult(UT.RollFEAT("Shift-Z", out RollResult));
         }
 
         private void btnClass1000_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Class-1000"));
+            UpdateResult(UT.RollFEAT("Class-1000", out RollResult));
         }
 
         private void btnClass3000_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Class-3000"));
+            UpdateResult(UT.RollFEAT("Class-3000", out RollResult));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Class-5000"));
+            UpdateResult(UT.RollFEAT("Class-5000", out RollResult));
         }
 
         private void btnBeyond_Click(object sender, EventArgs e)
         {
-            UpdateResult(UT.RollFEAT("Beyond"));
+            UpdateResult(UT.RollFEAT("Beyond", out RollResult));
         }
     }
 }
